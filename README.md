@@ -1,1 +1,1 @@
-# HI_Programaci-n_Rodrigo_Pozo_Sánchez
+# HI_Programación_Rodrigo_Pozo_Sánchez
