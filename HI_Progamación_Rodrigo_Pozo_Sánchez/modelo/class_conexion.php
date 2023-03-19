@@ -13,7 +13,7 @@ class ConexionMySQL {
             die("Error al conectar con la base de datos: " . mysqli_connect_error());
         }
     }
-    public function executeQuery($sql) { //Dado un sql, nos devuelve datos de la consulta.
+    public function executeQuery($sql) { // devuelve datos de la consulta.
         $result = mysqli_query($this->connection, $sql);
         if(!$result) {
             die("Error al ejecutar la consulta: " . mysqli_error($this->connection));
@@ -21,10 +21,10 @@ class ConexionMySQL {
         return $result;
     }
 
-    public function numRows($result) { //Dado un sql, devuelve el numero de filas de la consulta.
+    public function numRows($result) { //devuelve el numero de filas de la consulta.
         return mysqli_num_rows($result);
     }
-    public function getDataSingle($sql) { //Dado un sql, nos devuelve la primera fila.
+    public function getDataSingle($sql) { //devuelve la primera fila.
         $result = $this->executeQuery($sql);
         if($this->numRows($result) > 0) {
             return mysqli_fetch_assoc($result);
@@ -33,7 +33,7 @@ class ConexionMySQL {
         }
     }
 
-    public function executeInstruction($sql) { //Dado un sql, devuelve el numero de filas afectadas.
+    public function executeInstruction($sql) { //devuelve el numero de filas afectadas.
         $result = mysqli_query($this->connection, $sql);
         if(!$result) {
             die("Error al ejecutar la instrucción: " . mysqli_error($this->connection));
@@ -45,7 +45,7 @@ class ConexionMySQL {
         return mysqli_insert_id($this->connection);
     }
 
-    public function close() { //cerrar conexion de la base de datos
+    public function close() { //cierra conexion de la base de datos
         mysqli_close($this->connection);
     }
 }
