@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/stylecontac.css">
+    <link rel="stylesheet" href="css/normalize.css">
+        <!-- GOOGLE FONTs -->
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <!-- FONT AWESOME -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <!-- ANIMATE CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+        <script src="https://kit.fontawesome.com/a7daddc7d9.js" crossorigin="anonymous"></script>
+
+    <title>LOG IN</title>
+</head>
+<style>
+    body {
+  background: linear-gradient(to bottom, #ff9933, #ff33cc);
+}
+
+.anav {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.anav:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.logo {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 40px;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.logo span {
+  color: #ff33cc;
+  transition: all 0.5s ease-in-out;
+}
+
+.logo:hover span {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+label:hover {
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-form {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px 5px rgba(255, 255, 255, 0.3);
+  animation: slide-in 1s forwards;
+}
+
+.contact-form form {
+  animation: slide-in 1s forwards;
+}
+
+.contact-form form p {
+  animation: fade-in 1s forwards;
+}
+
+.contact-form form button {
+  animation: fade-in 1s forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
+<body>
+
+    <div id="top">
+        <div id="menunav">
+            <div class="navega"><span><a class="anav" href="login.html"><strong>Iniciar sesión</strong></a></span></div>
+            <div class="navega"><span><a class="anav" href="registro.html"><strong>Registrarse</strong></a></span></div>
+        </div>
+    </div>     
+<!-- formulario -->
+
+<div class="content">
+
+  <h1 class="logo">REGISTRATE<span> AQUI</span></h1>
+
+  <div>
+      <div class="contact-form">
+          <h3>CREAR CUENTA</h3>
+          <form action="modelo/user_controler.php" method="post">
+            <p>
+                <label>Nombre</label>
+                <input type="text" name="name">
+            </p>
+            <p>
+                <label>Apellidos</label>
+                <input type="text" name="apellidos">
+            </p>
+              <p>
+                  <label>Correo Electronico</label>
+                  <input type="email" name="email">
+              </p>
+              <p>
+                <label>Contraseña</label>
+                <input type="password" name="password">
+            </p>
+              <p class="block">
+                  <button type="submit">
+                      Crear cuenta
+                  </button>
+              </p>
+              <p>
+                <input type="hidden" name="acction" value="registrar">
+            </p>
+          </form>
+      </div>
+     
